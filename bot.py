@@ -19,15 +19,25 @@ logger = logging.getLogger(__name__)
 
 TOKEN = '1477909236:AAF8YbI0j-RCHs5MGssjacT0BiEWZ_uDM-Y'
 
-def start(update, context): """Send a message when the command /start is issued.""" update.message.reply_text('Hi!')
+def start(update, context): 
+    """Send a message when the command /start is issued."""
+    update.message.reply_text('Hi!')
 
-def help(update, context): """Send a message when the command /help is issued.""" update.message.reply_text('Help!')
+def help(update, context): 
+    """Send a message when the command /help is issued.""" 
+    update.message.reply_text('Help!')
 
-def echo(update, context): """Echo the user message.""" update.message.reply_text(update.message.text)
+def echo(update, context): 
+    """Echo the user message.""" 
+    update.message.reply_text(update.message.text)
 
-def error(update, context): """Log Errors caused by Updates.""" logger.warning('Update "%s" caused error "%s"', update, context.error)
+def error(update, context): 
+    """Log Errors caused by Updates."""
+    logger.warning('Update "%s" caused error "%s"', update, context.error)
 
-def echo(update, context): """Echo the user message.""" update.message.reply_text(update.message.text)
+def echo(update, context): 
+    """Echo the user message."""
+    update.message.reply_text(update.message.text)
 
 def main(): updater = Updater(TOKEN, use_context=True)
 
